@@ -1,13 +1,13 @@
 html,
 body {
-  height: 100vh;
+  height: 100%;
 }
 
 body {
   margin: 0;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(auto, 6);
+  grid-template-rows: 10% 15% 15% 15% 35% 10%;
   grid-template-areas:
     "header"
     "sec1"
@@ -25,7 +25,8 @@ aside {
 header {
   grid-area: header;
   display: grid;
-  grid-template-columns: 80% 30%;
+  max-width: 100%;
+  grid-template-columns: 80% 20%;
 }
 
 header div:nth-child(1) {
