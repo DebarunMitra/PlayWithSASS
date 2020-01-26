@@ -1,50 +1,86 @@
-html, body{
-    height: 100vh;
+html,
+body {
+  height: 100vh;
 }
 
-body{
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(auto, 6);
+  grid-template-areas:
+    "header"
+    "sec1"
+    "sec2"
+    "sec3"
+    "main"
+    "footer";
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: #007fff;
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 80% 30%;
+}
+
+header div:nth-child(1) {
+  background-color: #91c8ff;
+}
+
+header div:nth-child(2) {
+  background-color: #007fff;
+}
+
+section:nth-last-of-type(1) {
+  grid-area: sec1;
+  background-color: #b3d8fd;
+}
+
+section:nth-last-of-type(2) {
+  grid-area: sec2;
+  background-color: #5e86af;
+}
+
+section:nth-last-of-type(3) {
+  grid-area: sec3;
+  background-color: #6d9fd2;
+}
+
+main {
+  grid-area: main;
+  background-color: #7da9d5;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #588ec3;
+}
+
+/* responsive view */
+
+@media only screen and (min-width: 768px) {
+  body {
     margin: 0;
     display: grid;
     grid-template-columns: auto 27% 27% 27%;
     grid-template-rows: 8% 30% auto 10%;
-    grid-template-areas: 
-        "sidebar header header header"
-        "sidebar sec1 sec2 sec3"
-        "sidebar main main main"
-        "sidebar footer footer footer";
+    grid-template-areas:
+      "sidebar header header header"
+      "sidebar sec1 sec2 sec3"
+      "sidebar main main main"
+      "sidebar footer footer footer";
+  }
+
+  header {
+    grid-template-columns: 100%;
+  }
+
+  header div:nth-child(2) {
+    display: none;
+  }
 }
-
-aside{
-    grid-area: sidebar;
-    background-color: #007FFF;
-}
-
-header{
-    grid-area: header;
-    background-color:#91C8FF;
-}
-
- section:nth-last-of-type(1){
-     grid-area: sec1;
-     background-color: #B3D8FD;
- }
-
-  section:nth-last-of-type(2){
-     grid-area: sec2;
-     background-color: #5E86AF;
- }
-
-  section:nth-last-of-type(3){
-     grid-area: sec3;
-     background-color: #6D9FD2;
- }
-
- main{
-     grid-area: main;
-     background-color: #7DA9D5;
- }
-
- footer{
-     grid-area: footer;
-     background-color: #588EC3;
- }
