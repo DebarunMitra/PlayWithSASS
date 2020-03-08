@@ -23,11 +23,12 @@
         margin-bottom: 30px;
     }
 
-    @mixin clearfix{
+}
+
+ @mixin clearfix{
         &:after{
             content: "";
             display: block;
             clear: both;
         }
     }
-}
