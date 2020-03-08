@@ -62,7 +62,7 @@ section h1{
         float: left;
         box-sizing: border-box;
         text-align: center;
-        width: (100%/3);
+        width: (100%/3 );
     }
     img{
         width: 60%;
@@ -79,4 +79,14 @@ section h1{
     ul{
         @include clearfix;
     }
+}
+
+#projects li{
+    // float: left;
+    // width: 23%;
+    // margin-right: 2%;
+    @include grid(4, 2%)
+    img{
+        widht: 100%;
+    } 
 }
