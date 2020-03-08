@@ -9,6 +9,12 @@
     background: $deepblue;
     ul{
         width: 100%;
+        @include clearfix; 
+        // &:after{
+        //       content: "";
+        //      display: block;
+        //     clear: both;
+        // }
     }
     li{
         float: left;
@@ -20,14 +26,13 @@
         padding: 16px;
         display: block;
         text-align: center;
+        &:hover{
+            background: #333;
+        }
     }
 }
 
-#main-nav ul:after{
-    content: "";
-    display: block;
-    clear: both;
-}
+
 //end main
 
 section h1{
