@@ -17,6 +17,9 @@
         display: block;
         text-transform: uppercase;
         font-weight: bold;
+        @include mQ(3000px, 1200px){
+            font-size: 68px;
+        }
     }
     span-title{
         font-weight: normal;
@@ -40,5 +43,19 @@
         width: ((100%-(($cols - 1)*$margin))/$cols);
         &:nth-child(#{$cols}n){
             margin-right: 0;
+        }
+    }
+
+    @mixin mQ($arg...){
+        @if lenght($arg) == 1{
+                @media screen and (max-width:nth($list: $arg , $n: 1 )){
+                     @content;
+                }
+        }
+        
+        @if lenght($arg) == 2{
+                @media screen and (max-width:nth($list: $arg , $n: 1 )) and (min-width: nth($list: $arg, $n: 2)){
+                     @content;
+                }
         }
     }
