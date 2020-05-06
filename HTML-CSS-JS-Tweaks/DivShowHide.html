@@ -1,0 +1,90 @@
+<html> 
+<head> 
+  
+    <title>Javascript</title> 
+  
+    <style type="text/css"> 
+        .circle { 
+            width: 130px; 
+            height: 130px; 
+            border-radius: 50%; 
+            float: left; 
+            margin-right: 50px; 
+			cursor: pointer;
+        } 
+          
+        .rounded { 
+            width: 130px; 
+            height: 130px; 
+            border-radius: 25%; 
+            float: left; 
+            margin-right: 50px;
+cursor: pointer;			
+        } 
+          
+        .square { 
+            width: 130px; 
+            height: 130px; 
+            border-radius: 0%; 
+            float: left; 
+            margin-right: 50px; 
+			cursor: pointer;
+        } 
+          
+        #circle { 
+            background-color: #196F3D; 
+        } 
+          
+        #rounded { 
+            background-color: #5DADE2; 
+        } 
+          
+        #square { 
+            background-color: #58D68D; 
+        } 
+		
+		.buttons{
+			display: flex;
+		}
+		.buttons p{
+			padding : 10px;
+		}
+    </style> 
+  
+</head> 
+  
+<body> 
+<div class="buttons">
+<p id="circleName" >Click Circle</p>
+<p id="roundedName">Click Round</p>
+<p id="squareName" >Click Square</p>
+</div>
+
+	<div id="Main">All Shapes are Coming in same div<br/>
+	<div class='circle' id='circle' style="display: block;"></div>
+	<div class='rounded' id='rounded'  style="display: none;"></div>
+	<div class='square' id='square' style="display: none;"></div>
+	</div> 
+    <script type="text/javascript"> 
+        document.getElementById("circleName").onclick = function() { 
+            document.getElementById("circle").style.display = "block";
+            document.getElementById("rounded").style.display = "none"; 			
+			document.getElementById("square").style.display = "none";
+        } 
+  
+        document.getElementById("roundedName").onclick = function() { 
+            document.getElementById("circle").style.display = "none";
+            document.getElementById("rounded").style.display = "block"; 			
+			document.getElementById("square").style.display = "none";  
+        } 
+  
+        document.getElementById("squareName").onclick = function() { 
+            document.getElementById("circle").style.display = "none";
+            document.getElementById("rounded").style.display = "none"; 			
+			document.getElementById("square").style.display = "block";   
+        } 
+    </script> 
+  
+</body> 
+  
+</html> 
